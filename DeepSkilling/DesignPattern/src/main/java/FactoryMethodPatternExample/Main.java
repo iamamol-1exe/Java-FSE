@@ -1,5 +1,13 @@
 package FactoryMethodPatternExample;
 
+import FactoryMethodPatternExample.documents.ExeclDocument;
+import FactoryMethodPatternExample.documents.PdfDocument;
+import FactoryMethodPatternExample.documents.WordDocument;
+import FactoryMethodPatternExample.factoryclass.DocumentFactory;
+import FactoryMethodPatternExample.factoryclass.ExeclDocumentFactory;
+import FactoryMethodPatternExample.factoryclass.PdfDocumentFactory;
+import FactoryMethodPatternExample.factoryclass.WordDocumentFactory;
+
 public class Main {
     public static void main(String[] args) {
         ExeclDocumentFactory execlDocumentFactory = new ExeclDocumentFactory();
@@ -8,7 +16,7 @@ public class Main {
 
 
         PdfDocumentFactory pdfFactory = new PdfDocumentFactory();
-        PdfDocument pdf = pdfFactory.createDocument();
+        PdfDocument pdf =  pdfFactory.createDocument();
         pdf.PdfPrint();
 
         WordDocumentFactory wordFactory = new WordDocumentFactory();
