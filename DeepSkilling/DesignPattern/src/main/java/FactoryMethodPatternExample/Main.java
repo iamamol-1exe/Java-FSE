@@ -1,28 +1,25 @@
 package FactoryMethodPatternExample;
 
-import FactoryMethodPatternExample.documents.ExeclDocument;
-import FactoryMethodPatternExample.documents.PdfDocument;
-import FactoryMethodPatternExample.documents.WordDocument;
+import FactoryMethodPatternExample.documents.Document;
 import FactoryMethodPatternExample.factoryclass.DocumentFactory;
-import FactoryMethodPatternExample.factoryclass.ExeclDocumentFactory;
 import FactoryMethodPatternExample.factoryclass.PdfDocumentFactory;
 import FactoryMethodPatternExample.factoryclass.WordDocumentFactory;
-
+import FactoryMethodPatternExample.factoryclass.ExeclDocumentFactory;
 public class Main {
     public static void main(String[] args) {
-        ExeclDocumentFactory execlDocumentFactory = new ExeclDocumentFactory();
-        ExeclDocument execlDocument = execlDocumentFactory.createDocument();
-        execlDocument.ExeclPrint();
+
+        DocumentFactory excelFactory = new ExeclDocumentFactory();
+        Document excel = excelFactory.createDocument("sttdd.xlsx", 54);
+        excel.printDeatails();
 
 
-        PdfDocumentFactory pdfFactory = new PdfDocumentFactory();
-        PdfDocument pdf =  pdfFactory.createDocument();
-        pdf.PdfPrint();
 
-        WordDocumentFactory wordFactory = new WordDocumentFactory();
-        WordDocument word = wordFactory.createDocument();
-        word.WordPrint();
+        DocumentFactory pdfFactory = new PdfDocumentFactory();
+        Document pdf = pdfFactory.createDocument("doc.pdf", 54);
+        pdf.printDeatails();
 
-
+        DocumentFactory wordFactory = new WordDocumentFactory();
+        Document word = wordFactory.createDocument("otdt.docx", 54);
+        word.printDeatails();
     }
 }
