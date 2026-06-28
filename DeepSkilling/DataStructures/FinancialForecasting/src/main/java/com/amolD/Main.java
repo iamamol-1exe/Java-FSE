@@ -1,0 +1,36 @@
+package com.amolD;
+
+
+
+//Time Complexity
+//Each recursive call computes one year.
+//For n years:
+//Number of recursive calls = n
+//Time Complexity = O(n)
+//Space Complexity = O(n) (due to the recursion call stack)
+
+class Main {
+
+    public static void main(String[] args) {
+
+        double presentValue = 10000;
+        double growthRate = 0.10;   // 10%
+        int years = 5;
+
+        double result = futureValue(presentValue, growthRate, years);
+
+        System.out.printf("Future Value after %d years = %.2f%n", years, result);
+    }
+
+    public static double futureValue(double presentValue, double growthRate, int years) {
+
+        // Base case
+        if (years == 0) {
+            return presentValue;
+        }
+
+        // Recursive call
+        return futureValue(presentValue, growthRate, years - 1) * (1 + growthRate);
+    }
+
+}
