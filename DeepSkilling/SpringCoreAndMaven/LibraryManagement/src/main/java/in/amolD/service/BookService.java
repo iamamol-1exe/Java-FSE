@@ -14,6 +14,7 @@ public class BookService {
 
     public void addBook(Book book){
         repository.addBook(book);
+        System.out.println("Book added");
     }
 
     public Book getBook(String name){
