@@ -22,7 +22,6 @@ public class OrmLearnApplication {
         LOGGER.info("Spring Boot Application Started");
 
         countryService = context.getBean(CountryService.class);
-
     }
 
     private static void testGetAllCountries() {

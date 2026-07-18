@@ -1,0 +1,16 @@
+
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/hibernate-mapping">
+
+<class name="in.amolD.model.Employee">
+
+    <id name="id">
+        <generator class="identity"></generator>
+    </id>
+
+    <property name="name"/>
+    <property name="salary" />
+    <property name="dept"/>
+
+</class>
+
+</hibernate-mapping>

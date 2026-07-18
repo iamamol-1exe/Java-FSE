@@ -1,0 +1,10 @@
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5431/sanctury</property>
+        <property name="hibernate.connection.username">amold</property>
+        <property name="hibernate.connection.password">amold123</property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
+
+    </session-factory>
+</hibernate-configuration>
