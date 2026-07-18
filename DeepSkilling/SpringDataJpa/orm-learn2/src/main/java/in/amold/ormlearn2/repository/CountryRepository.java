@@ -1,0 +1,9 @@
+package in.amold.ormlearn2.repository;
+
+import in.amold.ormlearn2.model.Country;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface CountryRepository extends JpaRepository<Country,String> {
+}
