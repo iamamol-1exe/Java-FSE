@@ -7,6 +7,7 @@ import in.amold.ormlearn2.repository.CountryRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -41,6 +42,11 @@ public class CountryService {
         } else {
             throw new CountryNotFoundException("Country with code " + code + " not found");
         }
+    }
+
+    @Transactional
+    public List<Country> getCountriesByName(String name){
+        return repo.findByName(name);
     }
 
     @Transactional

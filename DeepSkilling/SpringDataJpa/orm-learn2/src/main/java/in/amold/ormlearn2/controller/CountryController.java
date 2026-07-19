@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 
 @RestController
 public class CountryController {
@@ -41,5 +43,10 @@ public class CountryController {
     @ExceptionHandler(CountryNotFoundException.class)
     public ResponseEntity<String> handleCountryNotFoundException(CountryNotFoundException ex) {
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
+    }
+
+    @GetMapping("/search-by-name")
+    public List<Country> searchByName(@RequestParam String name){
+        return service.getCountriesByName(name);
     }
 }
