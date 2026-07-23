@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="IT" class="in.amold.springrest2.model.Department">
+        <property name="id" value="1"/>
+        <property name="description" value="Information Technology"/>
+        <property name="name" value="IT"/>
+    </bean>
+    <bean id="CSE" class="in.amold.springrest2.model.Department">
+        <property name="id" value="2"/>
+        <property name="description" value="=Computer Science"/>
+        <property name="name" value="CSE"/>
+    </bean>
+    <bean id="AI" class="in.amold.springrest2.model.Department">
+        <property name="id" value="3"/>
+        <property name="description" value="AI"/>
+        <property name="name" value="AI"/>
+    </bean>
+</beans>
