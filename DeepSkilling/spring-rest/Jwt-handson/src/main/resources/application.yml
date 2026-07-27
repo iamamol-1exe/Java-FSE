@@ -1,0 +1,14 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5431/test
+    driver-class-name: org.postgresql.Driver
+    username: amold
+    password: amold123
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+jwt:
+  secret: lnksngirngtnbkktbnothojnopdszdsfhyjkqq
